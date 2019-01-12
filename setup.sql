@@ -1,16 +1,18 @@
 
-CREATE DATABASE IF NOT EXISTS purchase_control;
+CREATE DATABASE IF NOT EXISTS purchase_control
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
 
 USE purchase_control;
 
 CREATE TABLE IF NOT EXISTS purchase (
-  id INT AUTO_INCREMENT,
+  id INT AUTO_INCREMENT NOT NULL,
   description VARCHAR(255),
   price DOUBLE,
   purchase_date DATE,
   received BOOLEAN,
   PRIMARY KEY (id)
-);
+) DEFAULT CHARSET = utf8;
 
 INSERT INTO purchase (description, price, purchase_date, received) VALUES ('Licensed Frozen Chair', 534.04, '2018-05-15', false);
 INSERT INTO purchase (description, price, purchase_date, received) VALUES ('Incredible Plastic Chicken', 283.65, '2018-04-11', false);
