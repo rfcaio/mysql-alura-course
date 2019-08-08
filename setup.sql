@@ -1525,3 +1525,5 @@ UPDATE purchase SET client_id = 142 WHERE id = 497;
 UPDATE purchase SET client_id = 243 WHERE id = 498;
 UPDATE purchase SET client_id = 186 WHERE id = 499;
 UPDATE purchase SET client_id = 375 WHERE id = 500;
+
+ALTER TABLE purchase ADD FOREIGN KEY (client_id) REFERENCES client (id);
