@@ -24,3 +24,11 @@ CREATE TABLE IF NOT EXISTS user (
   PRIMARY KEY (id)
 ) DEFAULT CHARSET = utf8;
 ```
+
+**INSERT INTO**
+
+```sql
+INSERT INTO user (`name`, gender, email, date_of_birth) VALUES
+('bob', 'M', 'bob@mail.com', '1990-11-04'),
+('ana', DEFAULT, 'ana@mail.com', '1959-07-11');
+```
