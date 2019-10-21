@@ -40,3 +40,11 @@ SELECT * FROM `user`;
 
 SELECT u.`name` AS `name`, YEAR(u.date_of_birth) AS `year of birth` FROM `user` u;
 ```
+
+To filter your results, use `WHERE` clause:
+
+```sql
+SELECT u.`name` AS `name` FROM user u WHERE gender = 'F';
+
+SELECT u.email AS email FROM `user` u WHERE u.email IS NULL;
+```
