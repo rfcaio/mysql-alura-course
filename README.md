@@ -44,7 +44,7 @@ SELECT u.`name` AS `name`, YEAR(u.date_of_birth) AS `year of birth` FROM `user` 
 To filter your results, use `WHERE` clause:
 
 ```sql
-SELECT u.`name` AS `name` FROM `user` u WHERE gender = 'F';
+SELECT u.`name` AS `name` FROM `user` u WHERE u.gender = 'F';
 
 SELECT u.email AS email FROM `user` u WHERE u.email IS NULL;
 ```
@@ -55,4 +55,10 @@ An example of `BETWEEN` clause (both queries are equivalent):
 SELECT * FROM `user` u WHERE u.date_of_birth >= '1990-01-01' AND u.date_of_birth <= '1999-12-31';
 
 SELECT * FROM `user` u WHERE u.date_of_birth BETWEEN '1990-01-01' AND '1999-12-31';
+```
+
+An example of `LIKE` clause:
+
+```sql
+SELECT u.`name` AS `name` FROM `user` u WHERE u.`name` LIKE '%Caio%';
 ```
