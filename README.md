@@ -49,6 +49,14 @@ SELECT u.`name` AS `name` FROM `user` u WHERE u.gender = 'F';
 SELECT u.email AS email FROM `user` u WHERE u.email IS NULL;
 ```
 
+An example of `WHERE` clause with boolean values (both queries are equivalent). The constants `TRUE` and `FALSE` evaluate to `1` and `0` and can be written in any lettercase:
+
+```sql
+SELECT * FROM `user` WHERE deleted = FALSE;
+
+SELECT * FROM `user` WHERE deleted = 0;
+```
+
 An example of `BETWEEN` clause (both queries are equivalent):
 
 ```sql
