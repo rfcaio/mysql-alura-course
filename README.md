@@ -62,3 +62,11 @@ An example of `LIKE` clause:
 ```sql
 SELECT u.`name` AS `name` FROM `user` u WHERE u.`name` LIKE '%Caio%';
 ```
+
+**ALTER TABLE**
+
+Use `ADD COLUMN` to add a new column:
+
+```sql
+ALTER TABLE `user` ADD COLUMN deleted BOOLEAN DEFAULT 0 AFTER date_of_birth;
+```
