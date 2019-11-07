@@ -73,8 +73,16 @@ SELECT u.`name` AS `name` FROM `user` u WHERE u.`name` LIKE '%Caio%';
 
 **ALTER TABLE**
 
-Use `ADD COLUMN` to add a new column:
+An example of `ADD COLUMN` clause:
 
 ```sql
 ALTER TABLE `user` ADD COLUMN deleted BOOLEAN DEFAULT 0 AFTER date_of_birth;
+
+ALTER TABLE `user` ADD COLUMN to_be_droped BOOLEAN DEFAULT 1 FIRST;
+```
+
+An example of `DROP COLUMN` clause:
+
+```sql
+ALTER TABLE `user` DROP COLUMN to_be_droped;
 ```
