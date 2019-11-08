@@ -86,3 +86,9 @@ An example of `DROP COLUMN` clause:
 ```sql
 ALTER TABLE `user` DROP COLUMN to_be_droped;
 ```
+
+An example of `MODIFY` clause:
+
+```sql
+ALTER TABLE `user` MODIFY date_of_birth DATETIME DEFAULT CURRENT_TIMESTAMP;
+```
