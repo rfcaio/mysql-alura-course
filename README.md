@@ -92,3 +92,9 @@ An example of `MODIFY` clause:
 ```sql
 ALTER TABLE `user` MODIFY date_of_birth DATETIME DEFAULT CURRENT_TIMESTAMP;
 ```
+
+**UPDATE**
+
+```sql
+UPDATE `user` SET gender = 'F' WHERE id = 3;
+```
