@@ -98,3 +98,9 @@ SELECT u.`name` AS `name` FROM `user` u WHERE u.`name` LIKE '%Caio%';
 ```sql
 UPDATE `user` SET gender = 'F' WHERE id = 3;
 ```
+
+**DELETE**
+
+```sql
+DELETE FROM `user` WHERE YEAR(date_of_birth) >= 1990;
+```
