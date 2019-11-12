@@ -25,14 +25,6 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) DEFAULT CHARSET = utf8;
 ```
 
-**INSERT INTO**
-
-```sql
-INSERT INTO `user` (`name`, gender, email, date_of_birth) VALUES
-('bob', 'M', 'bob@mail.com', '1990-11-04'),
-('ana', DEFAULT, 'ana@mail.com', '1959-07-11');
-```
-
 **ALTER TABLE**
 
 An example of `ADD COLUMN` clause:
@@ -41,6 +33,14 @@ An example of `ADD COLUMN` clause:
 ALTER TABLE `user` ADD COLUMN deleted BOOLEAN DEFAULT 0 AFTER date_of_birth;
 
 ALTER TABLE `user` ADD COLUMN to_be_droped BOOLEAN DEFAULT 1 FIRST;
+```
+
+**INSERT INTO**
+
+```sql
+INSERT INTO `user` (`name`, gender, email, date_of_birth) VALUES
+('bob', 'M', 'bob@mail.com', '1990-11-04'),
+('ana', DEFAULT, 'ana@mail.com', '1959-07-11');
 ```
 
 An example of `DROP COLUMN` clause:
