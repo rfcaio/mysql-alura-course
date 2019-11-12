@@ -35,14 +35,6 @@ ALTER TABLE `user` ADD COLUMN deleted BOOLEAN DEFAULT 0 AFTER date_of_birth;
 ALTER TABLE `user` ADD COLUMN to_be_droped BOOLEAN DEFAULT 1 FIRST;
 ```
 
-**INSERT INTO**
-
-```sql
-INSERT INTO `user` (`name`, gender, email, date_of_birth) VALUES
-('bob', 'M', 'bob@mail.com', '1990-11-04'),
-('ana', DEFAULT, 'ana@mail.com', '1959-07-11');
-```
-
 An example of `DROP COLUMN` clause:
 
 ```sql
@@ -53,6 +45,14 @@ An example of `MODIFY` clause:
 
 ```sql
 ALTER TABLE `user` MODIFY date_of_birth DATETIME DEFAULT CURRENT_TIMESTAMP;
+```
+
+**INSERT INTO**
+
+```sql
+INSERT INTO `user` (`name`, gender, email, date_of_birth) VALUES
+('bob', 'M', 'bob@mail.com', '1990-11-04'),
+('ana', DEFAULT, 'ana@mail.com', '1959-07-11');
 ```
 
 **SELECT**
