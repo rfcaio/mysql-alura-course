@@ -4,7 +4,7 @@
 
 ## SQL Statements
 
-**CREATE DATABASE**
+### CREATE DATABASE
 
 ```sql
 CREATE DATABASE IF NOT EXISTS foo
@@ -12,7 +12,7 @@ DEFAULT CHARACTER SET utf8
 DEFAULT COLLATE utf8_general_ci;
 ```
 
-**CREATE TABLE**
+### CREATE TABLE
 
 ```sql
 CREATE TABLE IF NOT EXISTS `user` (
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 ) DEFAULT CHARSET = utf8;
 ```
 
-**ALTER TABLE**
+### ALTER TABLE
 
 An example of `ADD COLUMN` clause:
 
@@ -47,7 +47,7 @@ An example of `MODIFY` clause:
 ALTER TABLE `user` MODIFY date_of_birth DATETIME DEFAULT CURRENT_TIMESTAMP;
 ```
 
-**INSERT INTO**
+### INSERT INTO
 
 ```sql
 INSERT INTO `user` (`name`, gender, email, date_of_birth) VALUES
@@ -55,7 +55,7 @@ INSERT INTO `user` (`name`, gender, email, date_of_birth) VALUES
 ('ana', DEFAULT, 'ana@mail.com', '1959-07-11');
 ```
 
-**SELECT**
+### SELECT
 
 ```sql
 SELECT * FROM `user`;
@@ -93,13 +93,13 @@ An example of `LIKE` clause:
 SELECT u.`name` AS `name` FROM `user` u WHERE u.`name` LIKE '%Caio%';
 ```
 
-**UPDATE**
+### UPDATE
 
 ```sql
 UPDATE `user` SET gender = 'F' WHERE id = 3;
 ```
 
-**DELETE**
+### DELETE
 
 ```sql
 DELETE FROM `user` WHERE YEAR(date_of_birth) >= 1990;
