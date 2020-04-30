@@ -23,12 +23,25 @@ DEFAULT COLLATE utf8_general_ci;
 ### CREATE TABLE
 
 ```sql
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` INT AUTO_INCREMENT NOT NULL,
+CREATE TABLE IF NOT EXISTS user (
+  id INT AUTO_INCREMENT NOT NULL,
   date_of_birth DATE NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
+  full_name VARCHAR(255) NOT NULL,
   gender ENUM('F', 'M') DEFAULT 'F',
-  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+) DEFAULT CHARSET = utf8;
+```
+
+The same statement without `USE foo`:
+
+```sql
+CREATE TABLE IF NOT EXISTS foo.user (
+  id INT AUTO_INCREMENT NOT NULL,
+  date_of_birth DATE NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  full_name VARCHAR(255) NOT NULL,
+  gender ENUM('F', 'M') DEFAULT 'F',
   PRIMARY KEY (id)
 ) DEFAULT CHARSET = utf8;
 ```
