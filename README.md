@@ -12,6 +12,14 @@ DEFAULT CHARACTER SET utf8
 DEFAULT COLLATE utf8_general_ci;
 ```
 
+If an identifier contains special characters or is a reserved word, we should quote it:
+
+```sql
+CREATE DATABASE IF NOT EXISTS `foo bar`
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
+```
+
 ### CREATE TABLE
 
 ```sql
